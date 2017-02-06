@@ -1,0 +1,19 @@
+<div ng-controller="CartCtrl">
+	<table>
+		<thead>
+			<td>Item Name</td>
+			<td>Quantity</td>
+			<td>Price</td>
+		</thead>
+		<tr ng-repeat="fruit in order">
+			<td>{{fruit.name}}</td>
+			<td><button class="btn" ng-click="decItem(fruit.id)">-</button><input type="number" value="1" ng-model="fruit.quantity"/><button class="btn" ng-click="incItem(fruit.id)">+</button></td>
+			<td>{{fruit.quantity*fruit.price | currency:"₹":0}}</td>
+		</tr>
+		<tfoot>
+			<td>Total</td>
+			<td></td>
+		</tfoot>
+	</table>
+<button class="btn btn-danger" ng-click="clearCart()">Clearcart</button>
+</div>

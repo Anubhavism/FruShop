@@ -1,0 +1,25 @@
+
+<div ng-controller="MainCtrl">
+Search: <input type="text" ng-model="search">
+<hr/>
+	<table>
+		<thead>
+			<td>Item Name</td>
+			<td>Price</td>
+			<td>Cart</td>
+		</thead>
+		<tr ng-controller="CartCtrl" ng-repeat="dish in dishes | filter: search">
+			<td>{{dish.name}}</td>
+			<td>{{dish.price | currency:"₹":0}}</td>
+			<td><a href="" ng-click="addCart(dish)">add to cart</a></td>
+		</tr>
+	</table>
+<hr/>
+</div>
+
+
+
+
+<!-- <ul>
+		<li ng-controller="CartCtrl" ng-repeat="dish in dishes | filter: search">{{dish.name}} {{dish.price | currency:"₹":0}}<span class="pull-right"><a href="" ng-click="addCart(dish)">add to cart</a></span></li>
+	</ul> -->
