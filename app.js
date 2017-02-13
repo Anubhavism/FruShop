@@ -5,6 +5,10 @@ var myApp= angular.module('shopApp',[]);
 myApp.config(function($routeProvider){
 	$routeProvider
 		.when('/',{
+			templateUrl: 'views/front.html',
+			controller: 'MainCtrl'
+		})
+		.when('/main',{
 			templateUrl: 'views/main.html',
 			controller: 'MainCtrl'
 		})
