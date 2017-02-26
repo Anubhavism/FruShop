@@ -4,15 +4,41 @@
 	<input type="text" ng-model="search" placeholder="Search.." />
 	</div>
 	<hr/>
-	<div id="content">
-		<div ng-controller="CartCtrl" ng-repeat="dish in dishes | filter: search" class="menuDiv">
+	
+	<div class="main">
+                 <a href=""><div ng-controller="CartCtrl" class="menuDiv" ng-repeat="dish in dishes | filter: search">
+		                <img ng-src="static-data/{{dish.image}}" width="100px" height="100px" />
+		                <div class="mask">
+		                    <h2>{{dish.name}}</h2>
+		                    <p>{{dish.price | currency:"₹":0}}</p>
+		                    <a href="" ng-click="addCart(dish)">add to cart</a>
+		                </div>
+		            </div>
+		          </a>
+		          
+    </div>
+		
+	<hr/>
+
+</div>
+
+
+
+
+
+<!-- <div ng-controller="CartCtrl" ng-repeat="dish in dishes | filter: search" class="menuDiv">
 			<img ng-src="static-data/{{dish.image}}" class="itemFruits" />
 			<h3>{{dish.name}}</h3>
 			<p>{{dish.price | currency:"₹":0}}</p>
 			<a href="" ng-click="addCart(dish)">add to cart</a>
 			<br><br>
-		</div>
-	</div>
+		</div> -->
 
-	<hr/>
-</div>
+		 <!-- <div ng-controller="CartCtrl" ng-repeat="dish in dishes | filter: search" class="view view-fifth">
+		                <img ng-src="static-data/{{dish.image}}" width="300px" height="200px" />
+		                <div class="mask">
+		                    <h2>{{dish.name}}</h2>
+		                    <p>{{dish.price | currency:"₹":0}}</p>
+		                    <a href="" ng-click="addCart(dish)">add to cart</a>
+		                </div>
+		            </div> -->
