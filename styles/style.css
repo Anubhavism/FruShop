@@ -222,15 +222,14 @@
 	
 	}
 	.desCart{
-		display: inline-block;
+		display: inline-flex;
 		
-		float: right;
 		margin-top: 10%;
 		
 	}
 
-	.desCart>p{
-		display: inline-block;
+	.desCart p{
+		display: inline;
 		
 		margin:0 10%;
 	}
@@ -244,10 +243,4 @@
 	.mainCart:hover{
 		border-bottom:0.6px solid #39c7ce;
 	}
-	.checkout{
-		background-color: rgba(0,0,0,0.7);
-		color: white;
-	}
-	.checkout p{
-		display: inline-block;
-	}
+	
